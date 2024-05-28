@@ -6,12 +6,22 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var allResultsString = "Result String"
+    
+    
+    @IBOutlet weak var labelResult: UILabel!
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        labelResult.numberOfLines = 0
+        labelResult.text = allResultsString
     }
 
 
