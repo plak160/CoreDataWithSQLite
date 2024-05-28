@@ -13,9 +13,9 @@
 		6BA36CAD2C05BBDF00BE7853 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6BA36CAC2C05BBDF00BE7853 /* Base */; };
 		6BA36CB22C05BBE000BE7853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA36CB12C05BBE000BE7853 /* Assets.xcassets */; };
 		6BA36CB52C05BBE000BE7853 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6BA36CB42C05BBE000BE7853 /* Base */; };
-		6BA36CBE2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BA36CBC2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodeld */; };
-		6BA36CC12C05BE0800BE7853 /* Groups+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA36CBF2C05BE0800BE7853 /* Groups+CoreDataClass.swift */; };
-		6BA36CC22C05BE0800BE7853 /* Groups+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA36CC02C05BE0800BE7853 /* Groups+CoreDataProperties.swift */; };
+		6BA36CC52C05C64800BE7853 /* MyDatabase_PP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BA36CC32C05C64800BE7853 /* MyDatabase_PP.xcdatamodeld */; };
+		6BA36CCA2C05C6F800BE7853 /* Groups+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA36CC82C05C6F800BE7853 /* Groups+CoreDataClass.swift */; };
+		6BA36CCB2C05C6F800BE7853 /* Groups+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA36CC92C05C6F800BE7853 /* Groups+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		6BA36CB12C05BBE000BE7853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BA36CB42C05BBE000BE7853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BA36CB62C05BBE000BE7853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BA36CBD2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyDatabase_<PP> .xcdatamodel"; sourceTree = "<group>"; };
-		6BA36CBF2C05BE0800BE7853 /* Groups+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Groups+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6BA36CC02C05BE0800BE7853 /* Groups+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Groups+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6BA36CC42C05C64800BE7853 /* MyDatabase_PP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDatabase_PP.xcdatamodel; sourceTree = "<group>"; };
+		6BA36CC82C05C6F800BE7853 /* Groups+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Groups+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6BA36CC92C05C6F800BE7853 /* Groups+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Groups+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +46,9 @@
 		6BA36C992C05BBDF00BE7853 = {
 			isa = PBXGroup;
 			children = (
-				6BA36CBF2C05BE0800BE7853 /* Groups+CoreDataClass.swift */,
-				6BA36CC02C05BE0800BE7853 /* Groups+CoreDataProperties.swift */,
-				6BA36CBC2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodeld */,
+				6BA36CC82C05C6F800BE7853 /* Groups+CoreDataClass.swift */,
+				6BA36CC92C05C6F800BE7853 /* Groups+CoreDataProperties.swift */,
+				6BA36CC32C05C64800BE7853 /* MyDatabase_PP.xcdatamodeld */,
 				6BA36CA42C05BBDF00BE7853 /* CoreDataWithSQLite */,
 				6BA36CA32C05BBDF00BE7853 /* Products */,
 			);
@@ -147,10 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA36CC52C05C64800BE7853 /* MyDatabase_PP.xcdatamodeld in Sources */,
 				6BA36CAA2C05BBDF00BE7853 /* ViewController.swift in Sources */,
-				6BA36CBE2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodeld in Sources */,
-				6BA36CC12C05BE0800BE7853 /* Groups+CoreDataClass.swift in Sources */,
-				6BA36CC22C05BE0800BE7853 /* Groups+CoreDataProperties.swift in Sources */,
+				6BA36CCA2C05C6F800BE7853 /* Groups+CoreDataClass.swift in Sources */,
+				6BA36CCB2C05C6F800BE7853 /* Groups+CoreDataProperties.swift in Sources */,
 				6BA36CA62C05BBDF00BE7853 /* AppDelegate.swift in Sources */,
 				6BA36CA82C05BBDF00BE7853 /* SceneDelegate.swift in Sources */,
 			);
@@ -375,14 +375,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6BA36CBC2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodeld */ = {
+		6BA36CC32C05C64800BE7853 /* MyDatabase_PP.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6BA36CBD2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodel */,
+				6BA36CC42C05C64800BE7853 /* MyDatabase_PP.xcdatamodel */,
 			);
-			currentVersion = 6BA36CBD2C05BC3200BE7853 /* MyDatabase_<PP> .xcdatamodel */;
-			name = "MyDatabase_<PP> .xcdatamodeld";
-			path = "/Users/plak/Desktop/studia/3 semestr/progApkMobil/xCode/lab7/CoreDataWithSQLite/MyDatabase_<PP> .xcdatamodeld";
+			currentVersion = 6BA36CC42C05C64800BE7853 /* MyDatabase_PP.xcdatamodel */;
+			name = MyDatabase_PP.xcdatamodeld;
+			path = "/Users/plak/Desktop/studia/3 semestr/progApkMobil/xCode/lab7/CoreDataWithSQLite/MyDatabase_PP.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
