@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         
-        addGroup(name: "Grupa 12K1", code: "12K1")
+            // addGroup(name: "Grupa 12K1", code: "12K1")
+        
+        addSeveralGroups()
         
         labelResult.numberOfLines = 0
         labelResult.text = allResultsString
@@ -48,7 +50,18 @@ class ViewController: UIViewController {
             updateMessageString(newMessage: "Saved failed.")
         }
     }
+    func addSeveralGroups(){
+        addGroup(name: "Grupa 11K1", code: "11K1")
+        addGroup(name: "Grupa 11K2", code: "11K2")
+        addGroup(name: "Grupa 11K3", code: "11K3")
+        
+        addGroup(name: "Grupa 12K2", code: "12K2")
+        addGroup(name: "Grupa 12K3", code: "12K3")
+        
+        addGroup(name: "Grupa 13K1", code: "13K1")
+        addGroup(name: "Grupa 13K2", code: "13K2")
+        addGroup(name: "Grupa 13K3", code: "13K3")
+    }
     
-   // /Users/plak/Library/Developer/CoreSimulator/Devices/EDDE665B-77D0-4C6E-853C-A64EA957AB72/data/Containers/Data/Application/D3BEE5CE-A251-44A8-9666-DCD7170ACA9B/Library/Application Support/
 }
 
