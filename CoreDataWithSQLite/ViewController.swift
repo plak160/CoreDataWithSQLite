@@ -27,7 +27,13 @@ class ViewController: UIViewController {
         fetchAllGroups()
             //fetchAllGroups(code: "12K2")
         
-        updateFirstGroup(newCode: "12K1_New")
+            //updateFirstGroup(newCode: "12K1_New")
+        
+        
+        
+            //deleteLastGroup()
+        
+        deleteAllGroups()
         
         labelResult.numberOfLines = 0
         labelResult.text = allResultsString
@@ -129,6 +135,50 @@ class ViewController: UIViewController {
         }
     }
     
+    func deleteLastGroup(){
+        let fetchRequest: NSFetchRequest<Groups> = Groups.fetchRequest()
+        var deletedGroupName = ""
+        
+        
+        
+        do {
+            
+                let groups = try context.fetch(fetchRequest)
+                
+                if let lastGroup = groups.last {
+                    deletedGroupName = lastGroup.name ?? ""
+                    context.delete(lastGroup)
+                }
+                
+                try context.save()
+                print("Group deleted")
+                updateMessageString(newMessage: " Group \(deletedGroupName) deleted")
+            
+        }catch {
+            print("Failed to delete group")
+            updateMessageString(newMessage: "Failed to delete group")
+        }
+    }
+    
+    func deleteAllGroups() {
+        let fetchRequest: NSFetchRequest<Groups> = Groups.fetchRequest()
+        
+        do {
+            let groups = try context.fetch(fetchRequest)
+            
+            for group in groups {
+                context.delete(group)
+            }
+            
+            try context.save()
+            print("All groups deleted")
+            updateMessageString(newMessage: "All groups deleted")
+        } catch {
+            print("Failed to delete groups")
+            updateMessageString(newMessage: "Failed to delete groups")
+        }
+    }
+
     
 }
 
