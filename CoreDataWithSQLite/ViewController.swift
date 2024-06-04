@@ -22,7 +22,10 @@ class ViewController: UIViewController {
         
             // addGroup(name: "Grupa 12K1", code: "12K1")
         
-        addSeveralGroups()
+            //addSeveralGroups()
+        
+        fetchAllGroups()
+        fetchAllGroups(code: "12K2")
         
         labelResult.numberOfLines = 0
         labelResult.text = allResultsString
@@ -62,6 +65,48 @@ class ViewController: UIViewController {
         addGroup(name: "Grupa 13K2", code: "13K2")
         addGroup(name: "Grupa 13K3", code: "13K3")
     }
+    
+    func getGroupsFromFetchRequest(fetchRequest: NSFetchRequest<Groups>,
+        extraDescription: String = " "){
+        
+        var textToShow = "--------------------" +
+        "\nAll groups" + extraDescription + "\n--------------------"
+        print(textToShow)
+        updateMessageString(newMessage: textToShow)
+        
+        do {
+            let groups = try context.fetch(fetchRequest)
+            
+            for group in groups {
+                textToShow.append(" Name:")
+                textToShow = group.name ?? ""
+                textToShow.append("\n  code:")
+                textToShow.append(group.code ?? "")
+                textToShow.append("\n--------------------")
+                print(textToShow)
+                updateMessageString(newMessage: textToShow)
+            }
+        } catch {
+            print("Failed to fetch groups")
+            updateMessageString(newMessage: "Failed to fetch groups")
+        }
+    }
+    
+    func fetchAllGroups(){
+        let fetchRequest: NSFetchRequest<Groups> = Groups.fetchRequest()
+        
+        getGroupsFromFetchRequest(fetchRequest: fetchRequest)
+    }
+    
+    func fetchAllGroups(code: String){
+        let fetchRequest: NSFetchRequest<Groups> = Groups.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate(format: "code LIKE %@", code)
+        
+        getGroupsFromFetchRequest(fetchRequest: fetchRequest,
+            extraDescription: " code = \(code)")
+    }
+    
     
 }
 
