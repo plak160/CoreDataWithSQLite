@@ -25,7 +25,9 @@ class ViewController: UIViewController {
             //addSeveralGroups()
         
         fetchAllGroups()
-        fetchAllGroups(code: "12K2")
+            //fetchAllGroups(code: "12K2")
+        
+        updateFirstGroup(newCode: "12K1_New")
         
         labelResult.numberOfLines = 0
         labelResult.text = allResultsString
@@ -105,6 +107,26 @@ class ViewController: UIViewController {
         
         getGroupsFromFetchRequest(fetchRequest: fetchRequest,
             extraDescription: " code = \(code)")
+    }
+    
+    func updateFirstGroup(newCode: String = "No Code"){
+        let fetchRequest: NSFetchRequest<Groups> = Groups.fetchRequest()
+        
+        do{
+            let groups = try context.fetch(fetchRequest)
+            var groupName = ""
+            
+            let firstGroup = groups.first
+            firstGroup?.code = newCode
+            groupName = firstGroup?.name ?? ""
+            
+            try context.save()
+            print("Group updated")
+            updateMessageString(newMessage: "Group \(groupName) updated")
+        }catch {
+            print("Failed to update group")
+            updateMessageString(newMessage: "Failed to update group")
+        }
     }
     
     
